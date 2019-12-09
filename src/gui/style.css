@@ -1,0 +1,23 @@
+.tree-table-row-cell {
+    -fx-text-fill: darkcyan;
+    -fx-border-color: black;
+    -fx-border-style: solid;
+    -fx-border-width: 0.25;
+    -fx-font :normal  20px 'serif' ;
+}
+
+.tree-table-row-cell:even {
+    -fx-background-color:   #E5F1F4;
+
+}
+.tree-table-row-cell:odd {
+    -fx-background-color: #F9FBFB;
+
+}
+
+.tree-table-row-cell:hover {
+    -fx-font :normal bold 20px 'serif'  ;
+    -fx-background-color:  #FFFBEB;
+    -fx-border-style: solid;
+    -fx-border-width: 1;
+}
