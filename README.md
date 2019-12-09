@@ -9,5 +9,5 @@ A JavaFX application using the library is [included](src/gui/GUIMain.java) withi
 
 ### Screenshots
 
-![CpuScheduler](https://user-images.githubusercontent.com/48678280/70407025-65bd5e00-1a4b-11ea-9fc0-cf5d042854be.jpg)
+![CpuScheduler](https://user-images.githubusercontent.com/48678280/70407767-3e1bc500-1a4e-11ea-820f-553e77230618.png)
 
