@@ -11,3 +11,5 @@ A JavaFX application using the library is [included](src/gui/GUIMain.java) withi
 
 ![CpuScheduler](https://user-images.githubusercontent.com/48678280/70407767-3e1bc500-1a4e-11ea-820f-553e77230618.png)
 
+
+> سبحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، أَشْهَدُ أَنْ لا إِلهَ إِلأَ انْتَ أَسْتَغْفِرُكَ وَأَتْوبُ إِلَيْكَ.
