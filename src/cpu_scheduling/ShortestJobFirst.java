@@ -46,27 +46,4 @@ public class ShortestJobFirst {
                 Utility.FormatDouble(avg_turnaround / input_process.size()));
     }
 
-    public static void main(String[] args) {
-        List<Row> LR = new ArrayList();
-        //{'p2': [0, 12], 'p3': [3, 8], 'p4': [5, 4], 'p1': [10, 10], 'p5': [12, 6]}
-//        LR.add(new Row("P2", 0, 12));
-//        LR.add(new Row("P3", 3, 8));
-//        LR.add(new Row("P4", 5, 4));
-//        LR.add(new Row("P1", 10, 10));
-//        LR.add(new Row("P5", 12, 6));
-
-        LR.add(new Row("P1", 0, 3));
-        LR.add(new Row("P2", 3, 7));
-        LR.add(new Row("P3", 4, 2));
-        LR.add(new Row("P4", 8, 5));
-        LR.add(new Row("P5", 12, 6));
-        LR.add(new Row("P6", 15, 1));
-        LR.add(new Row("P7", 17, 8));
-        System.out.println(LR);
-        Output Calc = ShortestJobFirst.Calc(LR);
-        System.out.println("===================================");
-        System.out.println(Calc);
-        System.out.println("===================================");
-
-    }
 }

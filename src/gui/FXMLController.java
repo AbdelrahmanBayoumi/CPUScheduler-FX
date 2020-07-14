@@ -70,7 +70,6 @@ public class FXMLController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        System.out.println("FXMLController -> initialize() ...");
         processNameCol.setCellValueFactory(new TreeItemPropertyValueFactory<>("processName"));
         ArrivalTimeCol.setCellValueFactory(new TreeItemPropertyValueFactory<>("arrivalTime"));
         BurstTimeCol.setCellValueFactory(new TreeItemPropertyValueFactory<>("burstTime"));
@@ -88,15 +87,14 @@ public class FXMLController implements Initializable {
 
     private List<Row> change(ObservableList<RowRecord> input) {
         List<Row> r = new ArrayList<>();
-        for (RowRecord i : input) {
+        input.forEach((i) -> {
             r.add(new Row(i.getProcessName(), i.getArrivalTime(), i.getBurstTime()));
-        }
+        });
         return r;
     }
 
     @FXML
     private void AddProcessAction(ActionEvent event) {
-        System.out.println("FXMLController -> AddProcessAction() ...");
         try {
             RowRecord r = new RowRecord(processName.getText(), Integer.parseInt(ArrivalTime.getText()),
                     Integer.parseInt(BurstTime.getText()));
@@ -110,17 +108,14 @@ public class FXMLController implements Initializable {
             TreeItem<RowRecord> root = new RecursiveTreeItem<>(data, RecursiveTreeObject::getChildren);
             Table.setRoot(root);
             Table.setShowRoot(false);
-        } catch (Exception e) {
+        } catch (NumberFormatException e) {
             System.out.println("Exception in FXMLController -> AddProcessAction() : " + e);
         }
     }
 
     @FXML
     private void ComputeAction(ActionEvent event) {
-        System.out.println("FXMLController -> ComputeAction() ...");
         String AlgorithmValue = ((RadioButton) Algorithm.getSelectedToggle()).getText();
-        System.out.println("AlgorithmValue : " + AlgorithmValue);
-        System.out.println("data : " + data);
         if (data.isEmpty()) {
             return;
         }
@@ -132,31 +127,27 @@ public class FXMLController implements Initializable {
                     Output fcfs = FirstComeFirstServe.Calc(change(data));
                     AvgWaitingTimeLabel.setText(fcfs.getAvg_waiting() + "");
                     AvgTurnaroundTimeLabel.setText(fcfs.getAvg_turnaround() + "");
-                    System.out.println("FirstComeFirstServe.Calc(data) : " + fcfs);
                     break;
                 case "SJF":
                     Output sjf = ShortestJobFirst.Calc(change(data));
                     AvgWaitingTimeLabel.setText(sjf.getAvg_waiting() + "");
                     AvgTurnaroundTimeLabel.setText(sjf.getAvg_turnaround() + "");
-                    System.out.println("ShortestJobFirst.Calc(data) : " + sjf);
                     break;
                 case "STRF":
                     Output srtf = ShortestRemainingTime.Calc(change(data));
                     AvgWaitingTimeLabel.setText(srtf.getAvg_waiting() + "");
                     AvgTurnaroundTimeLabel.setText(srtf.getAvg_turnaround() + "");
-                    System.out.println("ShortestRemainingTime.Calc(data) : " + srtf);
                     break;
                 case "RR":
                     int q;
                     try {
                         q = Integer.parseInt(QuantumTimeTextField.getText());
-                    } catch (Exception e) {
+                    } catch (NumberFormatException e) {
                         break;
                     }
                     Output rr = RoundRobin.Calc(change(data), q);
                     AvgWaitingTimeLabel.setText(rr.getAvg_waiting() + "");
                     AvgTurnaroundTimeLabel.setText(rr.getAvg_turnaround() + "");
-                    System.out.println("RoundRobin.Calc(data) : " + rr);
                     break;
                 default:
                     System.out.println("ERROR");
@@ -168,7 +159,6 @@ public class FXMLController implements Initializable {
 
     @FXML
     private void CloseAction(Event event) {
-        System.out.println("FXMLController -> CloseAction() ...");
         ((Stage) ((Node) (event.getSource())).getScene().getWindow()).close();
     }
 

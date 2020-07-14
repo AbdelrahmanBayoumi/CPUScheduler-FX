@@ -1,5 +1,6 @@
 package gui;
 
+import java.io.IOException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -25,7 +26,7 @@ public class GUIMain extends Application {
             stage.setTitle("CPU Scheduler Simulator");
             stage.getIcons().add(new Image(getClass().getResourceAsStream("icon.png")));
             stage.show();
-        } catch (Exception e) {
+        } catch (IOException e) {
             System.out.println("Exception in GUIMain -> Start Method:-" + e);
             System.exit(0);
         }

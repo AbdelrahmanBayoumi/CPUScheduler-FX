@@ -117,8 +117,4 @@ public class Row extends RecursiveTreeObject<RowRecord> {
                 + "\n\twaitingTime=" + waitingTime + "\n\tturnaroundTime=" + turnaroundTime + "\n}";
     }
 
-    public static void main(String[] args) {
-        Row r = new Row("", 0, 0);
-        System.out.println(r);
-    }
 }

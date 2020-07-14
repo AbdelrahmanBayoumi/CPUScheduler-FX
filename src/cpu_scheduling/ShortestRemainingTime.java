@@ -6,7 +6,7 @@ import java.util.HashSet;
 import java.util.List;
 
 public class ShortestRemainingTime {
-    
+
     private static List<Row> filter(List<Row> process, int arrival_time) {
         List<Row> processes_out = new ArrayList<>();
         for (Row i : process) {
@@ -20,7 +20,7 @@ public class ShortestRemainingTime {
         Utility.sortBrust(processes_out);
         return processes_out;
     }
-    
+
     private static int getBrustByName(String name, List<Row> input_process) {
         for (Row i : input_process) {
             if (i.getProcessName().equals(name)) {
@@ -29,14 +29,14 @@ public class ShortestRemainingTime {
         }
         return 0;
     }
-    
+
     private static List<Row> RemoveDuplicateList(List<Row> input_process) {
         Collection<Row> hs = new HashSet<>(input_process);
         List<Row> process = new ArrayList<>(hs);
         Utility.sortName(process);
         return process;
     }
-    
+
     public static Output Calc(List<Row> input_process) {
         List<Row> process = new ArrayList<>();
         List<Row> L = Utility.deepCopy(input_process);
@@ -65,25 +65,9 @@ public class ShortestRemainingTime {
             avg_waiting += i.getWaitingTime();
             avg_turnaround += i.getTurnaroundTime();
         }
-        
+
         return new Output(process, Utility.FormatDouble(avg_waiting / input_process.size()),
-                 Utility.FormatDouble(avg_turnaround / input_process.size()));
+                Utility.FormatDouble(avg_turnaround / input_process.size()));
     }
-    
-    public static void main(String[] args) {
-        List<Row> LR = new ArrayList();
-        LR.add(new Row("P1", 0, 3));
-        LR.add(new Row("P2", 3, 7));
-        LR.add(new Row("P3", 4, 2));
-//        LR.add(new Row("P4", 8, 5));
-//        LR.add(new Row("P5", 12, 6));
-//        LR.add(new Row("P6", 15, 1));
-//        LR.add(new Row("P7", 17, 8));
-        System.out.println(LR);
-        System.out.println("===================================");
-//        System.out.println(filter(LR, 0));
-        System.out.println(Calc(LR));
-        System.out.println("===================================");
-        
-    }
+
 }
