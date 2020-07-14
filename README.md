@@ -1,6 +1,6 @@
 # CPUScheduler
 
-Java implementation of 4 CPU scheduling algorithms: *First Come First Serve (FCFS)*, *Shortest Job First (SJF)*, *Shortest Remaining Time (SRT)* and *Round Robin (RR)*.
+Java implementation of 4 [CPU scheduling algorithms](https://www.geeksforgeeks.org/cpu-scheduling-in-operating-systems/): *First Come First Serve ([FCFS](https://www.geeksforgeeks.org/program-for-fcfs-cpu-scheduling-set-1/))*, *Shortest Job First ([SJF](https://www.geeksforgeeks.org/program-for-shortest-job-first-or-sjf-cpu-scheduling-set-1-non-preemptive/))*, *Shortest Remaining Time First ([SRTF](https://www.geeksforgeeks.org/program-for-shortest-job-first-sjf-scheduling-set-2-preemptive/))* and *Round Robin ([RR](https://www.geeksforgeeks.org/program-round-robin-scheduling-set-1/))*.
 
 
 ## Demo
