@@ -4,6 +4,7 @@ Java implementation of 4 [CPU scheduling algorithms](https://www.geeksforgeeks.o
 <br> 
 
 [![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/AbdelrahmanBayoumi/CPUScheduler/master/LICENSE)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FAbdelrahmanBayoumi%2FCPUScheduler-FX.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FAbdelrahmanBayoumi%2FCPUScheduler-FX?ref=badge_shield)
 
 
 
@@ -38,3 +39,7 @@ Please ⭐️ this repo and share it with others
 -----------
 
 <h6 align="center">سبحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، أَشْهَدُ أَنْ لا إِلهَ إِلأَ انْتَ أَسْتَغْفِرُكَ وَأَتْوبُ إِلَيْكَ</h6>
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FAbdelrahmanBayoumi%2FCPUScheduler-FX.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FAbdelrahmanBayoumi%2FCPUScheduler-FX?ref=badge_large)
